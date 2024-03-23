@@ -1,3 +1,4 @@
+import Searchbar from '@/components/Searchbar'
 import Image from 'next/image'
 import React from 'react'
 
@@ -24,13 +25,19 @@ const Home = () => {
             analytics to help you convert, engage, and 
             retain more.
           </p>
-          Searchbar
+          <Searchbar/>
         </div>
         HeroCarousel
       </div>
     </section>
-    <section>
-      
+    <section className='trending-section'>
+      <h2 className='trending-text'>Trending</h2>
+      <div className=' flex flex-wrap gap-x-8 gap-y-16'>
+        {['Apple Iphone 15','Book','Sneakers'].map((product)=>(
+          <div>{product}</div>
+        ))}
+      </div>
+
     </section>
     </>
   )
